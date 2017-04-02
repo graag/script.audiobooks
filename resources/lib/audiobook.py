@@ -195,7 +195,7 @@ class AudioBookHandler():
         audiobookDetails = audiobookDB.getAudioBookDetails(self.filePath)
 
         if audiobookDetails not in [None, ""]:
-            self.title = audiobookDetails['title']
+            self.title = audiobookDetails['title'].decode('utf-8')
             self.numChapters = audiobookDetails['numChapters']
             self.position = audiobookDetails['position']
             self.chapterPosition = audiobookDetails['chapterPosition']
